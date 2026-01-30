@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ms-prompts
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-5
+server:
+  servlet:
+    context-path: /api

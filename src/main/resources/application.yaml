@@ -1,12 +1,20 @@
 spring:
   application:
+    # Nom du microservice
     name: ms-prompts
   ai:
+    # Configuration d'OpenAI (Spring AI)
     openai:
+      # Clé secrète pour l'authentification aux services OpenAI
       api-key: ${OPENAI_API_KEY}
       chat:
         options:
+          # Définition du modèle de langage à utiliser pour les interactions (ex: gpt-4, gpt-4o, etc.)
           model: gpt-5
+# Configuration du Serveur Web (Tomcat)
 server:
   servlet:
+    # Racine du contexte pour les URLs de l'API (ex: http://localhost:8081/api/...)
     context-path: /api
+  # Port d'écoute du service
+  port: 8081
